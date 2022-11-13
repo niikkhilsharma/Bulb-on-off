@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb:on/off</title>
+    <style>
+        body{
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            text-align: center
+        }
+
+        img {
+            width: 300px;
+            text-align: center;
+        }
+
+        button {
+            margin: 10px 0;
+            padding: 10px 53px;
+            font-size: 20px;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <h1>Click to turn the bulb to turn ON/OFF</h1>
+    <div><img id="img" src="./bulboff.png" alt="bulb-off image"></div>
+    <div>
+        <button id="btn">ON</button>
+    </div>
+    <audio id="audio" src="./click.mp3"></audio>
+</body>
+<script>
+
+    let button = document.getElementById('btn')
+    let image = document.getElementById('img')
+    let body = document.getElementById('body')
+    button.addEventListener('click', function run() {
+        if (button.innerHTML == 'ON') {
+            button.innerHTML = 'OFF'
+            image.src = './bulbon.png'
+            button.style.backgroundColor = 'yellow'
+            body.style.backgroundColor = 'yellow'
+            audio.play();
+        }
+        else {
+            button.innerHTML = 'ON'
+            image.src = './bulboff.png'
+            button.style.backgroundColor = 'transparent'
+            audio.play()
+            body.style.backgroundColor = 'white'
+        }
+    })
+
+
+</script>
+
+</html>

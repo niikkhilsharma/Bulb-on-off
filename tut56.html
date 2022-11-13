@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Appointment</li>
+            <li>Log In</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+    <div class="container">
+        this is an container
+    </div>
+    <script>
+        // .getElementById('main')
+        // .getElementByClassName("container")
+        // .queryselector('nav>li')
+        // select.innerHTML = 'hello'
+        // here select is an variable 
+
+
+        // let element = document.getElementById('main');
+        // console.log(element)
+        // console.log(element.innerHTML)
+        // nav.innerHTML ="hello"
+        // let container = document.getElementsByClassName('container')
+        // console.log(container)
+        // console.log(container[0])
+        // console.log(container[1])
+        //Now we will have a look at the query selector
+        // Quert selector is used to select element using the css selectors
+        let select = document.querySelector('#nav>li')
+        console.log(select)
+        let selects = document.querySelectorAll('#nav>li')
+        console.log("selects ", selects)
+
+        console.log("select =  ", select)
+        console.log("select[0] = ", selects[0].innerHTML = "hello")
+        console.log("select[1] = ", selects[1].innerHTML = "good bye")
+        console.log("this server is live")
+        console.log("select[3] = ", selects[3].innerHTML = 'this has been selected to be deleted')
+        // by default it would selectd the select[0]
+        console.log(select.innerHTML = ' ')
+        for (let i = 0; i < 5; i++) {
+            console.log(selects[i].innerHTML = "hello")
+        }
+    </script>
+</body>
+
+
+</html>
